@@ -1,0 +1,48 @@
+body {
+	background-color: #F3BCFA;
+}
+
+#now {
+			display: none;
+			justify-content: center;
+			margin-top: 5vh;
+}
+
+#button2 {
+			position: absolute;
+			left: 10px;
+			top: 10px;
+}
+
+.b {
+			background-color: blue;
+			cursor: pointer;
+			z-index: 100;
+			color: white;
+}
+
+#ims {
+			position: relative;
+			top: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+}
+
+#ims img {
+			margin: 20px;
+}
+
+#now .bigImg {
+			height: 90vh;
+			max-width: 95vw;
+}
+
+#paint img{
+			margin-left: 20px;
+			cursor: pointer;
+}
+
+#button {
+			top: 10px;
+}

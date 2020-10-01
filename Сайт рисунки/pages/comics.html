@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>comics</title>
+	<meta charset="utf-8">
+<script type="text/javascript" src="../jquery/jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../styles/stylePresentation.css">
+	<style type="text/css">
+		/*body {
+			background-color: #F3BCFA;
+		}
+
+		#now {
+			display: none;
+			justify-content: center;
+			margin-top: 5vh;
+		}
+
+		#button2 {
+			position: absolute;
+			left: 10px;
+			top: 10px;
+		}
+
+		.b {
+			background-color: blue;
+			cursor: pointer;
+			z-index: 100;
+			color: white;
+		}
+
+		#ims {
+			position: relative;
+			top: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		#ims img {
+			margin: 20px;
+		}
+
+		#now .bigImg {
+			height: 90vh;
+			max-width: 95vw;
+		}
+
+		#paint img{
+			margin-left: 20px;
+			
+			cursor: pointer;
+		}
+
+		#button {
+			top: 10px;
+		}*/
+	</style>
+	
+</head>
+<body>
+
+
+	
+	<div id="paint">
+		<div>
+			<a href="works.html" class="b"><==</a>
+		</div>
+
+		<div id="ims">
+	
+			<img src="../images/smallImages/munhgausen.jpg" class="paint" >
+			<img src="../images/smallImages/rabbits.jpg" class="paint">
+			<img src="../images/smallImages/family.jpg" class="paint">
+			<img src="../images/smallImages/munhgausen1.jpg" class="paint">
+			<img src="../images/smallImages/comTwelve.jpg" class="paint">
+			<img src="../images/smallImages/comOne.jpg" class="paint">
+			<img src="../images/smallImages/comTwo.jpg" class="paint">
+			<img src="../images/smallImages/comThree.jpg" class="paint">
+			<img src="../images/smallImages/comFour.jpg" class="paint">
+			<img src="../images/smallImages/comFive.jpg" class="paint">
+			<img src="../images/smallImages/comSix.jpg" class="paint">
+			<img src="../images/smallImages/comSeven.jpg" class="paint">
+			<img src="../images/smallImages/comEight.jpg" class="paint">
+			<img src="../images/smallImages/comNine.jpg" class="paint">
+			<img src="../images/smallImages/comTen.jpg" class="paint">
+			<img src="../images/smallImages/comEleven.jpg" class="paint">
+			<img src="../images/smallImages/comThirteen.jpg" class="paint">
+
+		</div>
+		
+	</div>
+	<div id="now">
+		<div id="button2">
+			<button class="b"><==</button>
+		</div>
+		<div id="im">
+			<img src="" class="bigImg">
+		</div>
+		
+		
+	</div>
+</body>
+
+<script type="text/javascript">
+	let imgs = [
+				'../images/munhgausen.jpg', '../images/rabbits.jpg', '../images/family.jpg', '../images/munhgausen1.jpg', '../images/comTwelve.jpg', '../images/comOne.jpg', 
+				'../images/comTwo.jpg', '../images/comThree.jpg', '../images/comFour.jpg', '../images/comFive.jpg', '../images/comSix.jpg', '../images/comSeven.jpg', 
+				'../images/comEight.jpg', '../images/comNine.jpg', '../images/comTen.jpg', '../images/comEleven.jpg', '../images/comThirteen.jpg'
+	];
+
+$('.paint').click(function() {
+
+	$('#now').css({'display': 'flex'});
+
+	let arrImg = document.querySelectorAll('.paint');
+	for (let i = 0; i < arrImg.length; i++) {
+		if(arrImg[i] == this) {
+			if(i == 0) {
+
+				$('#now .bigImg').attr('src', imgs[i]).css('transform', 'rotate(90deg)');
+			} else {
+				$('#now .bigImg').attr('src', imgs[i]).css('transform', 'rotate(0deg)');
+			}
+		}
+	}
+	
+	$('#paint').css({'display': 'none'});
+});
+
+$('#button2').click(function() {
+	$('#paint').css('display', 'flex');
+	$('#now').css('display', 'none');
+});
+	
+</script>
+</html>
+
+
+
+

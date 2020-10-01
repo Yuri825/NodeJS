@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sculpturs</title>
+	<meta charset="utf-8">
+<script type="text/javascript" src="../jquery/jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../styles/stylePresentation.css">
+	<style type="text/css">
+		/*body {
+			background-color: #F3BCFA;
+		}
+
+		#now {
+			display: none;
+			justify-content: center;
+			margin-top: 5vh;
+		}
+
+		#button2 {
+			position: absolute;
+			left: 10px;
+			top: 10px;
+		}
+
+		.b {
+			background-color: blue;
+			cursor: pointer;
+			z-index: 100;
+			color: white;
+		}
+
+		#ims {
+			position: relative;
+			top: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			
+		}
+
+		#ims img {
+			margin: 20px;
+		}
+
+		#now .bigImg {
+			height: 90vh;
+			max-width: 95vw;
+		}
+
+		#paint img{
+			margin-left: 20px;
+			
+			cursor: pointer;
+		}
+
+		#button {
+			top: 10px;
+		}*/
+	</style>
+
+</head>
+<body>
+	
+	<div id="paint">
+		<div>
+			<a href="works.html" class="b"><==</a>
+		</div>
+
+		<div id="ims">
+			<img src="../images/smallImages/fox.jpg" class="paint">
+			<img src="../images/smallImages/ulitka.jpg" class="paint">
+			<img src="../images/smallImages/monstr.jpg" class="paint">
+			<img src="../images/smallImages/cat1.jpg" class="paint">
+			<img src="../images/smallImages/kaplya.jpg" class="paint">
+			<img src="../images/smallImages/monstr1.jpg" class="paint">
+			<img src="../images/smallImages/mopcyall.jpg" class="paint">
+			<img src="../images/smallImages/mopsyababy.jpg" class="paint">
+			<img src="../images/smallImages/mopsyadochka.jpg" class="paint">
+			<img src="../images/smallImages/mopsyafamily.jpg" class="paint">
+			<img src="../images/smallImages/mopsyapapa.jpg" class="paint">
+			<img src="../images/smallImages/mopsyasyn.jpg" class="paint">
+			<img src="../images/smallImages/morzh.jpg" class="paint">
+			<img src="../images/smallImages/rose.jpg" class="paint">
+			<img src="../images/smallImages/threeEyes.jpg" class="paint">
+
+		</div>
+		
+	</div>
+	<div id="now">
+		<div id="button2">
+			<button class="b"><==</button>
+		</div>
+		<div id="im">
+			<img src="" class="bigImg">
+		</div>
+		
+		
+	</div>
+</body>
+
+<script type="text/javascript">
+	let imgs = [
+				'../images/fox.jpg', '../images/ulitka.jpg', '../images/monstr.jpg', '../images/cat1.jpg', '../images/kaplya.jpg', '../images/monstr1.jpg', '../images/mopcyall.jpg', 
+				'../images/mopsyababy.jpg', '../images/mopsyadochka.jpg', '../images/mopsyafamily.jpg', '../images/mopsyapapa.jpg', '../images/mopsyasyn.jpg', '../images/morzh.jpg', 
+				'../images/rose.jpg', '../images/threeEyes.jpg'
+	];
+
+$('.paint').click(function() {
+
+	$('#now').css({'display': 'flex'});
+
+	let arrImg = document.querySelectorAll('.paint');
+	for (let i = 0; i < arrImg.length; i++) {
+		if(arrImg[i] == this) {
+// console.log(i);
+			if(i == 5 || i == 10) {
+				$('#now .bigImg').attr('src', imgs[i]).css('transform', 'rotate(90deg)');
+			} else {
+				$('#now .bigImg').attr('src', imgs[i]).css('transform', 'rotate(0deg)');
+			}
+			
+			
+		}
+	}
+	
+	$('#paint').css({'display': 'none'});
+});
+
+$('#button2').click(function() {
+	$('#paint').css('display', 'flex');
+	$('#now').css('display', 'none');
+});
+	
+</script>
+</html>
+
+
+
+

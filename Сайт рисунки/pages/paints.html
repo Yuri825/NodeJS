@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>paints</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="../jquery/jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../styles/stylePresentation.css">
+	<!-- <style type="text/css">
+		body {
+			background-color: #F3BCFA;
+		}
+
+		#now {
+			display: none;
+			justify-content: center;
+			margin-top: 5vh;
+		}
+
+		#button2 {
+			position: absolute;
+			left: 10px;
+			top: 10px;
+		}
+
+		.b {
+			background-color: blue;
+			cursor: pointer;
+			z-index: 100;
+			color: white;
+		}
+
+		#ims {
+			position: relative;
+			top: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		#ims img {
+			margin: 20px;
+		}
+
+		#now .bigImg {
+			height: 90vh;
+			max-width: 95vw;
+		}
+
+		#paint img{
+			margin-left: 20px;
+			
+			cursor: pointer;
+		}
+
+		#button {
+			top: 10px;
+		}
+	</style> -->
+</head>
+<body>
+	
+	<div id="paint">
+		<div>
+			<a href="works.html" class="b"><==</a>
+		</div>
+
+		<div id="ims">
+			<img src="../images/smallImages/pikachu.jpg" class="paint">
+			<img src="../images/smallImages/burger.jpg" class="paint">
+			<img src="../images/smallImages/burgerfood.jpg" class="paint">
+			<img src="../images/smallImages/bottle.jpg" class="paint">
+			<img src="../images/smallImages/free.jpg" class="paint">
+			<img src="../images/smallImages/happy.jpg" class="paint">
+			<img src="../images/smallImages/hm.jpg" class="paint">
+			<img src="../images/smallImages/hotdog.jpg" class="paint">
+			<img src="../images/smallImages/febrier.jpg" class="paint">
+			<img src="../images/smallImages/model.jpg" class="paint">
+			<img src="../images/smallImages/dochka.jpg" class="paint">
+			<img src="../images/smallImages/zateyniky.jpg" class="paint">
+			<img src="../images/smallImages/mopsyacioner.jpg" class="paint">
+			<img src="../images/smallImages/mopsyachilka1.jpg" class="paint">
+			<img src="../images/smallImages/ushan.jpg" class="paint">
+			<img src="../images/smallImages/papa.jpg" class="paint">
+			<img src="../images/smallImages/tyulen.jpg" class="paint">
+			<img src="../images/smallImages/landskape.jpg" class="paint">
+			<img src="../images/smallImages/mumi.jpg" class="paint">
+			<img src="../images//smallImages/windows.jpg" class="paint">
+			<img src="../images/smallImages/usor.jpg" class="paint">
+			<img src="../images/smallImages/celebrity.jpg" class="paint">
+			<img src="../images/smallImages/fruit.jpg" class="paint">
+			<img src="../images/smallImages/lady.jpg" class="paint">
+			<img src="../images/smallImages/zhuravle.jpg" class="paint">
+			<img src="../images/smallImages/cat2.jpg" class="paint">
+			<img src="../images/smallImages/cat3.jpg" class="paint">		
+			<img src="../images/smallImages/home.jpg" class="paint">
+			<img src="../images/smallImages/superman.jpg" class="paint">
+			<img src="../images/smallImages/sapogy.jpg" class="paint">
+			<img src="../images/smallImages/mome.jpg" class="paint">
+			<img src="../images/smallImages/girl.jpg" class="paint">
+			<img src="../images/smallImages/fall.jpg" class="paint">
+			<img src="../images/smallImages/doll.jpg" class="paint">
+			<img src="../images/smallImages/garden.jpg" class="paint">
+			<img src="../images/smallImages/rabbit1.jpg" class="paint">
+			<img src="../images/smallImages/iceCream.jpg" class="paint">
+			<img src="../images/smallImages/policeMiami.jpg" class="paint">
+			<img src="../images/smallImages/girl1.jpg" class="paint">
+			<img src="../images/smallImages/harepen.jpg" class="paint">
+			<img src="../images/smallImages/pingui.jpg" class="paint">
+			<img src="../images/smallImages/avocado.jpg" class="paint">
+			<img src="../images/smallImages/catLeave.jpg" class="paint">
+			<img src="../images/smallImages/different.jpg" class="paint">
+			<img src="../images/smallImages/unicornCavai.jpg" class="paint">
+			<img src="../images/smallImages/unicornMagic.jpg" class="paint">
+			<img src="../images/smallImages/family.jpg" class="paint">
+			
+			
+
+
+		</div>
+		
+	</div>
+	<div id="now">
+		<div id="button2">
+			<button class="b"><==</button>
+		</div>
+		<div id="im">
+			<img src="" class="bigImg">
+		</div>
+		
+		
+	</div>
+</body>
+
+<script type="text/javascript">
+	let imgs = [
+				'../images/pikachu.jpg', '../images/burger.jpg', '../images/burgerfood.jpg', '../images/bottle.jpg', '../images/free.jpg', '../images/happy.jpg', '../images/hm.jpg', 
+				'../images/hotdog.jpg', '../images/febrier.jpg', '../images/model.jpg', '../images/dochka.jpg', '../images/zateyniky.jpg', '../images/mopsyacioner.jpg', '../images/mopsyachilka1.jpg', 
+				'../images/ushan.jpg', '../images/papa.jpg', '../images/tyulen.jpg', '../images/landskape.jpg', '../images/mumi.jpg', '../images/windows.jpg', '../images/usor.jpg', 
+				'../images/celebrity.jpg', '../images/fruit.jpg', '../images/lady.jpg', '../images/zhuravle.jpg', '../images/cat2.jpg', '../images/cat3.jpg',  
+				'../images/home.jpg', '../images/superman.jpg', '../images/sapogy.jpeg', '../images/mome.jpg', '../images/girl.jpg', '../images/fall.jpg', '../images/doll.jpg', '../images/garden.jpg', 
+				'../images/rabbit1.jpg', '../images/iceCream.jpg', '../images/policeMiami.jpg', '../images/girl1.jpg', '../images/harepen.jpg', '../images/pingui.jpg', '../images/avocado.jpg', 
+				'../images/catLeave.jpg', '../images/different.jpg', '../images/unicornCavai.jpg', '../images/unicornMagic.jpg', '../images/family.jpg'
+	];
+
+
+
+$('.paint').click(function() {
+	console.log(this);
+
+	$('#now').css({'display': 'flex'});
+
+	let arrImg = document.querySelectorAll('.paint');
+	for (let i = 0; i < arrImg.length; i++) {
+		if(arrImg[i] == this) {
+			if(i == 11) {
+				$('#now .bigImg').attr('src', imgs[i]).css('transform', 'rotate(-90deg)');
+			} else {
+				$('#now .bigImg').attr('src', imgs[i]).css('transform', 'rotate(0deg)');
+			}
+			
+		}
+	}
+	
+	$('#paint').css({'display': 'none'});
+});
+
+$('#button2').click(function() {
+	$('#paint').css('display', 'flex');
+	$('#now').css('display', 'none');
+});
+	
+</script>
+</html>
+
+
+
+
